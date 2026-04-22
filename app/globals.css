@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), serif;
+  
+  --color-primary: #003B95;
+  --color-accent: #D97706;
+  --color-ink-dark: #111827;
+  --color-ink-light: #4B5563;
+  --color-bg-base: #F9FAFB;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-base text-ink-dark;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-primary;
+  }
+}
+
+.editorial-headline {
+  @apply font-display text-[64px] leading-[1] tracking-[-1px];
+}
+
+.editorial-eyebrow {
+  @apply text-[12px] uppercase tracking-[4px] font-bold text-accent;
+}
+
+.editorial-subtext {
+  @apply text-[18px] leading-[1.6] text-ink-light max-w-[480px];
+}
